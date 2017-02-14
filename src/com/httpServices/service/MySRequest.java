@@ -144,19 +144,7 @@ public class MySRequest {
 			String paramArray[] = kv.split("&");
 			for(String paramkv:paramArray){
 				pkv =  paramkv.split("=");
-				int i = 0;
-				String K = "";
-				String V = "";
-				for(String p:pkv){
-					if(i==0){
-						K = p;
-					}else if(i==1){
-						V = p;
-					}
-					i++;
-				}
-				i = 0;
-				t.put(K, V);
+				t.put(pkv[0], pkv[1]);
 				pkv = null;
 			}
 		}else{
